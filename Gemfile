@@ -8,6 +8,8 @@ gem "rails", "~> 7.1.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'bootstrap-sass', '3.4.1'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -59,6 +61,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+gem 'rails-controller-testing'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
