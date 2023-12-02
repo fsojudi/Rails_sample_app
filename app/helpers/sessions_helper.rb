@@ -30,10 +30,7 @@ module SessionsHelper
     end
   end
 end
-    # Returns true if the user is logged in, false otherwise.
-    def logged_in?
-        !current_user.nil?
-    end
+
 
 
 # Forgets a persistent session.
@@ -55,4 +52,10 @@ end
   cookies.permanent.encrypted[:user_id] = user.id
   cookies.permanent[:remember_token] = user.remember_token
 end
+
+
+    # Returns true if the user is logged in, false otherwise.
+    def logged_in?
+      current_user.nil?
+  end
 end
