@@ -12,7 +12,9 @@ User.create!(name: "Exalje Users",
              email: "exampllke@railstutodfrial.org",
              password: "foobar",
              password_confirmation: "foobar",
-# admin:true
+# admin:true,
+activated: true,
+activated_at: Time.zone.now
             )
 # Generate a bunch of additional users.
 99.times do |n|
@@ -21,5 +23,7 @@ email = "example-#{n+1}user@railstutorial.org"
 password = "password"
 User.create!(name: name,email: email,
 password:  password,
-password_confirmation: password)
+password_confirmation: password
+activated: true,
+activated_at: Time.zone.now)
 end
